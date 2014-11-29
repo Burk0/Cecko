@@ -28,7 +28,7 @@ STROM *zapis(STROM *prv,STROM *akt,int height)
             prv->lavy=akt;
         }
         else{
-            prv=zapis(prv->lavy,akt,++height);
+            prv->lavy=zapis(prv->lavy,akt,++height);
         }
     }
     if(akt->num>prv->num)
@@ -38,7 +38,7 @@ STROM *zapis(STROM *prv,STROM *akt,int height)
             prv->pravy = akt;
         }
         else{
-            prv=zapis(prv->pravy,akt,++height);
+            prv->pravy=zapis(prv->pravy,akt,++height);
         }
     }
     return prv;
